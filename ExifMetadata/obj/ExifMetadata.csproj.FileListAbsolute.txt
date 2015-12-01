@@ -1,0 +1,5 @@
+C:\maxmaz\FindDuplicates\ExifMetadata\bin\Debug\ExifMetadata.dll
+C:\maxmaz\FindDuplicates\ExifMetadata\bin\Debug\ExifMetadata.pdb
+C:\maxmaz\FindDuplicates\ExifMetadata\obj\Debug\ResolveAssemblyReference.cache
+C:\maxmaz\FindDuplicates\ExifMetadata\obj\Debug\ExifMetadata.dll
+C:\maxmaz\FindDuplicates\ExifMetadata\obj\Debug\ExifMetadata.pdb

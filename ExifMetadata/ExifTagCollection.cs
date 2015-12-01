@@ -597,6 +597,19 @@ namespace LevDan.Exif
             }
         }
         #endregion
+
+        public string getValue(string fieldName)
+        {
+            foreach (int k in this._tags.Keys)
+            {
+                ExifTag t = this._tags[k];
+                if (t.FieldName == fieldName)
+                {
+                    return t.Value;
+                }
+            }
+            return "";
+        }
     }
 
     internal sealed class SupportedTags : Hashtable

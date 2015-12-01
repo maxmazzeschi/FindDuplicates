@@ -14,3 +14,13 @@ C:\Users\Massimiliano\Documents\Visual Studio 2005\Projects\FindDuplicates\FD\ob
 C:\Users\Massimiliano\Documents\Visual Studio 2005\Projects\FindDuplicates\FD\obj\Debug\FD.exe
 C:\Users\Massimiliano\Documents\Visual Studio 2005\Projects\FindDuplicates\FD\obj\Debug\FD.pdb
 C:\Users\Massimiliano\Documents\Visual Studio 2005\Projects\FindDuplicates\FD\obj\Debug\FD.TheForm.resources
+C:\maxmaz\FindDuplicates\FD\obj\Debug\FD.exe
+C:\maxmaz\FindDuplicates\FD\obj\Debug\FD.pdb
+C:\maxmaz\FindDuplicates\FD\bin\Debug\FD.exe
+C:\maxmaz\FindDuplicates\FD\bin\Debug\FD.pdb
+C:\maxmaz\FindDuplicates\FD\bin\Debug\ExifMetadata.dll
+C:\maxmaz\FindDuplicates\FD\bin\Debug\ExifMetadata.pdb
+C:\maxmaz\FindDuplicates\FD\obj\Debug\ResolveAssemblyReference.cache
+C:\maxmaz\FindDuplicates\FD\obj\Debug\FD.TheForm.resources
+C:\maxmaz\FindDuplicates\FD\obj\Debug\FD.Properties.Resources.resources
+C:\maxmaz\FindDuplicates\FD\obj\Debug\FD.csproj.GenerateResource.Cache

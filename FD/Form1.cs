@@ -23,8 +23,8 @@ namespace FD
             public long size;
         }
 
-        //string path = @"C:\Users\Massimiliano\SynoCloud\photo\Archivio fotografico";
-		string path = @"/run/user/1000/gvfs/smb-share:server=mdvstore,share=video/UsersTestArea/max/";
+        string path = @"C:\Users\Massimiliano\SynoCloud\photo\Archivio fotografico";
+		//string path = @"/run/user/1000/gvfs/smb-share:server=mdvstore,share=video/UsersTestArea/max/";
 
 
         static void DirSearch(string sDir, ref List<FINFO> fileList)
@@ -162,7 +162,9 @@ namespace FD
 			if (canBeDisplayed (info.x.fullPath)) {
 				try {
 				ExifTagCollection exif = new ExifTagCollection (info.x.fullPath);
+                leftTaken.Text = exif.getValue("DateTimeOriginal");
 				leftPBox.Load (info.x.fullPath);
+
 				} catch (Exception ex)
 				{
 					button1.Parent.Text =ex.Message;
@@ -171,13 +173,29 @@ namespace FD
             else
                 leftPBox.Image = null;
 			if (canBeDisplayed (info.y.fullPath)) {
-				ExifTagCollection exif = new ExifTagCollection (info.y.fullPath);
+                ExifTagCollection exif = new ExifTagCollection(info.y.fullPath);
+                rightTaken.Text = exif.getValue("DateTimeOriginal");
 				rightPBox.Load (info.y.fullPath);
 			}
             else
                 rightPBox.Image = null;
             leftPath.Text = info.x.fullPath.Substring(path.Length);
             rightPath.Text = info.y.fullPath.Substring(path.Length);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
