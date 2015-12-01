@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using LevDan.Exif;
 
 namespace FD
 {
@@ -158,12 +159,21 @@ namespace FD
         {
 
             ItemInfo info = ((Item)((ListBox)sender).SelectedItem).itemInfo;
-            if (canBeDisplayed(info.x.fullPath))
-                leftPBox.Load(info.x.fullPath);
+			if (canBeDisplayed (info.x.fullPath)) {
+				try {
+				ExifTagCollection exif = new ExifTagCollection (info.x.fullPath);
+				leftPBox.Load (info.x.fullPath);
+				} catch (Exception ex)
+				{
+					button1.Parent.Text =ex.Message;
+				}
+			}
             else
                 leftPBox.Image = null;
-            if (canBeDisplayed(info.y.fullPath))
-                rightPBox.Load(info.y.fullPath);
+			if (canBeDisplayed (info.y.fullPath)) {
+				ExifTagCollection exif = new ExifTagCollection (info.y.fullPath);
+				rightPBox.Load (info.y.fullPath);
+			}
             else
                 rightPBox.Image = null;
             leftPath.Text = info.x.fullPath.Substring(path.Length);

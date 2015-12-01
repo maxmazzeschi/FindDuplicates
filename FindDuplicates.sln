@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FD", "FD\FD.csproj", "{2A16F0A8-B1A5-4D8F-9D73-FA8951C1225D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExifMetadata", "ExifMetadata\ExifMetadata.csproj", "{ABD4E13C-1A47-4082-8D77-8F1E9312B1FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,13 @@ Global
 		{2A16F0A8-B1A5-4D8F-9D73-FA8951C1225D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A16F0A8-B1A5-4D8F-9D73-FA8951C1225D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A16F0A8-B1A5-4D8F-9D73-FA8951C1225D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD4E13C-1A47-4082-8D77-8F1E9312B1FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD4E13C-1A47-4082-8D77-8F1E9312B1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD4E13C-1A47-4082-8D77-8F1E9312B1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD4E13C-1A47-4082-8D77-8F1E9312B1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = FD\FD.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
