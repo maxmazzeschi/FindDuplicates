@@ -105,13 +105,17 @@ namespace FD
 
         private void button1_Click(object sender, EventArgs e)
         {
+            folderBrowserDialog1.ShowDialog();
+            path = folderBrowserDialog1.SelectedPath;
             dirInfo = new Dictionary<string, DirInfo>();
             dupList = new List<Item>();
             button1.Parent.Text = "Loading file list";
             List<FINFO> fileList = new List<FINFO>();
             DirSearch(path, ref fileList);
-            Console.WriteLine("Sorting");
+            //Console.WriteLine("Sorting");
             fileList.Sort(new FINFOComparer());
+            if (fileList.Count == 0)
+                return;
             button1.Parent.Text = "Checking";
 
             FINFO key = fileList[0];
@@ -362,6 +366,11 @@ namespace FD
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }

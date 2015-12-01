@@ -52,6 +52,7 @@ namespace FD
             this.rightSize = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.totalDup = new System.Windows.Forms.TextBox();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.leftPBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightPBox)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -92,7 +93,7 @@ namespace FD
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "Load...";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -337,6 +338,7 @@ namespace FD
         private System.Windows.Forms.TextBox rightSize;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox totalDup;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 
