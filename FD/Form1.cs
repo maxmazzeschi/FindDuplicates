@@ -22,7 +22,9 @@ namespace FD
             public long size;
         }
 
-        string path = @"C:\Users\Massimiliano\SynoCloud\photo\Archivio fotografico";
+        //string path = @"C:\Users\Massimiliano\SynoCloud\photo\Archivio fotografico";
+		string path = @"/run/user/1000/gvfs/smb-share:server=mdvstore,share=video/UsersTestArea/max/";
+
 
         static void DirSearch(string sDir, ref List<FINFO> fileList)
         {
@@ -129,13 +131,13 @@ namespace FD
                 }
                 key = current;
             }
-            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
-            sw.Start();
+            //System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            //sw.Start();
             listBox1.BeginUpdate();
             listBox1.Items.AddRange(tmp.ToArray());
             listBox1.EndUpdate();
-            sw.Stop();
-            System.Diagnostics.Debug.WriteLine(sw.ElapsedMilliseconds.ToString());
+            //sw.Stop();
+            //System.Diagnostics.Debug.WriteLine(sw.ElapsedMilliseconds.ToString());
 
             button1.Parent.Text = "Done";
         }
