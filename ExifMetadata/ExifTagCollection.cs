@@ -20,13 +20,19 @@ namespace LevDan.Exif
 
         public ExifTagCollection(string fileName, bool useEmbeddedColorManagement, bool validateImageData)
         {
-            using (FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            try
             {
-                Image image = System.Drawing.Image.FromStream(stream,
-                    useEmbeddedColorManagement,
-                    validateImageData);
+                using (FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+                {
+                    Image image = System.Drawing.Image.FromStream(stream,
+                        useEmbeddedColorManagement,
+                        validateImageData);
 
-                ReadTags(image.PropertyItems);
+                    ReadTags(image.PropertyItems);
+                }
+            }
+            catch (Exception e)
+            { 
             }
         }
 
@@ -600,6 +606,8 @@ namespace LevDan.Exif
 
         public string getValue(string fieldName)
         {
+            if (this._tags == null)
+                return "";
             foreach (int k in this._tags.Keys)
             {
                 ExifTag t = this._tags[k];
